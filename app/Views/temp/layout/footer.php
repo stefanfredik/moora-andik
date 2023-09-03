@@ -1,4 +1,4 @@
-<footer class="footer-admin mt-auto footer-light">
+<footer class="footer-admin mt-auto footer-dark">
     <div class="container-xl px-4">
         <div class="row">
             <div class="col-md-6 small"><?= APP_DESC; ?></div>

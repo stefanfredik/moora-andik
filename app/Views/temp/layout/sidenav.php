@@ -1,4 +1,4 @@
-<nav class="sidenav shadow-right sidenav-light">
+<nav class="sidenav shadow-right sidenav-dark">
     <div class="sidenav-menu">
         <div class="text-center my-2">
             <img width="80" class="img-fluid my-2" src="/assets/img/logo.png" alt="">

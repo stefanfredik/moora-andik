@@ -44,26 +44,26 @@
         <div style="text-align: center; ">
             <?php
             $srcLogo = APPPATH . '../public/assets/img/logo.png';
-            $srcNtt = APPPATH . '../public/assets/img/ntt.png';
+            $srcBali = APPPATH . '../public/assets/img/Bali.png';
 
             $imageDataLogo  = base64_encode(file_get_contents($srcLogo));
-            $imageDataNtt   = base64_encode(file_get_contents($srcNtt));
+            $imageDataBali   = base64_encode(file_get_contents($srcBali));
 
             $renderLogo     = 'data:' . mime_content_type($srcLogo) . ';base64,' . $imageDataLogo;
-            $renderDataNtt   = 'data:' . mime_content_type($srcNtt) . ';base64,' . $imageDataNtt;
+            $renderDataBali   = 'data:' . mime_content_type($srcBali) . ';base64,' . $imageDataBali;
             ?>
 
 
 
             <div style="display: inline-block;">
-                <img width="60px" src="<?= $renderDataNtt; ?>" alt="">
+                <img width="60px" src="<?= $renderDataBali; ?>" alt="">
             </div>
 
             <div style="display: inline-block; text-align: center; margin: 0 80px;">
-                <p style="margin: 0; font-weight: bold;">PEMERINTAH PROVINSI NUSA TENGGARA TIMUR</p>
-                <p style="margin: 0; font-weight: bold;">KABUPATEN MANGGARAI TENGAH</p>
-                <p style="margin: 0; font-weight: bold;">DESA WEWO</p>
-                <p style="margin: 0; font-size: small;">Jalan Lintas Iteng Ulumbu Desa Wewo </p>
+                <p style="margin: 0; font-weight: bold;">PEMERINTAH PROVINSI BALI</p>
+                <p style="margin: 0; font-weight: bold;">Kota Denpasar</p>
+                <p style="margin: 0; font-weight: bold;">Kelurahan Panjer</p>
+                <p style="margin: 0; font-size: small;">Jl. Tukad Pakerisan No. 65 Denpasar, Kode Pos 80225</p>
             </div>
 
             <div style="display: inline-block;">
@@ -74,7 +74,7 @@
 
         <div>
 
-            <p style="text-align: right;"><?php echo "Desa Wewo, " . date('d-m-Y'); ?></p>
+            <p style="text-align: right;"><?php echo "Kelurahan Panjer, " . date('d-m-Y'); ?></p>
             <h3 class="head"><?= $title; ?></h3>
             <h3 class="head">Tahun 2023</h3>
         </div>
@@ -83,7 +83,7 @@
         <?= $this->renderSection("table"); ?>
         <div class="footer">
             <div class="title">
-                Kepala desa Wewo
+                Kepala Lurah
             </div>
 
             <div>

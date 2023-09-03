@@ -116,45 +116,8 @@
         --bs-body-bg: #616161;
     }
 
-    /* sidebar */
-    .sidenav-light {
-        background-color: #448AFF;
-        color: #fff;
-    }
 
-    .sidenav-light .sidenav-menu .nav-link {
-        color: #fff;
-    }
-
-    .sidenav-light .sidenav-menu .nav-link .nav-link-icon {
-        color: #fff;
-    }
-
-    .sidenav-light .sidenav-menu .sidenav-menu-heading {
-        color: #fff;
-    }
-
-
-    .sidenav-light .sidenav-footer .sidenav-footer-subtitle {
-        color: #fff;
-    }
-
-    .sidenav-light .sidenav-menu .nav-link:hover {
-        color: #212121;
-        background-color: #BBDEFB;
-        /* font-weight: bold; */
-    }
-
-    .sidenav-light .sidenav-menu .nav-link.active {
-        color: #0061f2;
-        background-color: #fff;
-    }
-
-
-    /* Background */
-
-    .bg-gradient-primary-to-secondary {
-        background-color: #fff;
-        background-image: none;
+    body {
+        background-color: var(--bs-green);
     }
 </style>

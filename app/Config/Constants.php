@@ -97,5 +97,5 @@ define('EVENT_PRIORITY_HIGH', 10);
 const APP_NAME  = "SPK PKH";
 const APP_DESC   = "SISTEM PENDUKUNG KEPUTUSAN  PENERIMA PKH KELUARGA MISKIN KELURAHAN PANJER";
 const APP_VER   = "1.0.0";
-const LOGO_IMG = "assets/img/favicon.png";
+const LOGO_IMG = "assets/img/favicon.ico";
 const APP_SLUG = "KELURAHAN PANJER";
