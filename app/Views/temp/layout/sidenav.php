@@ -12,7 +12,10 @@
             if (in_groups('masyarakat')) echo view("/temp/layout/sidenav/masyarakat");
         }
         ?>
+
     </div>
+
+
     <!-- Sidenav Footer-->
     <div class="sidenav-footer">
         <div class="sidenav-footer-content">

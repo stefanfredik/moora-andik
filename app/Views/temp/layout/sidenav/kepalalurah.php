@@ -30,4 +30,9 @@
             <a class="nav-link <?= url_is("/laporan/penduduk") ? 'active' : '' ?>" href="/laporan/penduduk">Penduduk</a>
         </nav>
     </div>
+
+    <a class="nav-link" href="/logout">
+        <div class="nav-link-icon"><i data-feather="log-out"></i></div>
+        Logout
+    </a>
 </div>

@@ -19,4 +19,9 @@
         <div class="nav-link-icon"><i data-feather="layers"></i></div>
         Data Kriteria
     </a>
+
+    <a class="nav-link" href="/logout">
+        <div class="nav-link-icon"><i data-feather="log-out"></i></div>
+        Logout
+    </a>
 </div>
