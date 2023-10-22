@@ -11,7 +11,6 @@
                 <th>Kecamatan</th>
                 <th>Kabupaten</th>
                 <th>Provinsi</th>
-                <th>Alamat</th>
                 <th>Opsi</th>
             </tr>
         </thead>
