@@ -9,7 +9,7 @@
         if (logged_in()) {
             if (in_groups('admin')) echo view("/temp/layout/sidenav/admin");
             if (in_groups('kepala-lurah') || in_groups('pendamping'))  echo view("/temp/layout/sidenav/kepalalurah");
-            if (in_groups('pendamping-pkh')) echo view("/temp/layout/sidenav/masyarakat");
+            if (in_groups('pendamping-pkh')) echo view("/temp/layout/sidenav/pendamping");
         }
         ?>
 
