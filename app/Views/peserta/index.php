@@ -31,5 +31,25 @@
     });
 </script>
 
+<script>
+    const formInput = ["id_penduduk"];
+
+
+    function validation(error) {
+        resetForm(formInput);
+        if (error.id_penduduk) {
+            $("#nama").addClass("is-invalid");
+            $("#invalidIdPenduduk").html(error.id_penduduk);
+        }
+    }
+
+    function resetForm(arr) {
+        arr.forEach((a) => {
+            $(`#nama`).removeClass("is-invalid");
+            $("#invalidIdPenduduk").html("");
+        });
+    }
+</script>
+
 
 <?= $this->endSection(); ?>

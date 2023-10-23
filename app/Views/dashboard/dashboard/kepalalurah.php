@@ -1,5 +1,5 @@
 <div class="row">
-    <!-- <div class="col-lg-3 mb-4">
+    <div class="col-lg-3 mb-4">
         <a class="card lift h-100" href="/datapenduduk">
             <div class="card-body d-flex justify-content-center flex-column">
                 <div class="d-flex align-items-center justify-content-between">
@@ -12,7 +12,7 @@
                 </div>
             </div>
         </a>
-    </div> -->
+    </div>
 
     <div class="col-lg-3 mb-4">
         <!-- Dashboard example card 3-->

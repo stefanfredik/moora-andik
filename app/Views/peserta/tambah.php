@@ -23,21 +23,21 @@
                         </div>
                     </div>
 
-                    <div class="row mb-2">
+                    <!-- <div class="row mb-2">
                         <div class="col-md-4">
                             <label class="form-label">Periode Bantuan</label>
                         </div>
 
 
                         <div class="col-md-8">
-                            <select class="form-control" name="tahun" id="" required>
+                            <select class="form-control" name="periode" id="" required>
                                 <option value="">Pilih Periode</option>
                                 <?php for ($i = 1; $i <= 4; $i++) : ?>
                                     <option value="Periode <?= $i; ?>">Periode <?= $i; ?></option>
                                 <?php endfor; ?>
                             </select>
                         </div>
-                    </div>
+                    </div> -->
                     <hr class="">
 
                     <div class="row mb-2">
@@ -47,12 +47,13 @@
 
 
                         <div class="col-md-8">
-                            <select class="" name="id_penduduk" id="nama" required>
+                            <select class="form-control" name="id_penduduk" id="nama" required>
                                 <option value="">Pilih Penduduk</option>
                                 <?php foreach ($dataPenduduk as $dt) : ?>
                                     <option value="<?= $dt['id']; ?>"><?= $dt['nama_lengkap']; ?></option>
                                 <?php endforeach; ?>
                             </select>
+                            <div id="invalidIdPenduduk" class="invalid-feedback"></div>
                         </div>
                     </div>
 

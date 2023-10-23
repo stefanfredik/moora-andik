@@ -7,9 +7,9 @@
     <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="/dashboard"><?= APP_SLUG; ?></a>
     <ul class="navbar-nav align-items-center ms-auto">
         <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
-            <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="btn btn-icon btn-transparent-dark dropdown-toggle border border-white" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <!-- <img class="img-fluid" src="/sbadmin/assets/img/illustrations/profiles/profile-1.png" /> -->
-                <i class="bi bi-person-fill dropdown-user-img fa-2x rounded-circle border text-center align-center p-2"></i>
+                <i class="bi bi-person-fill dropdown-user-img fa-2x rounded-circle border text-white   text-center align-center p-2"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownUserImage">
                 <h6 class="dropdown-header d-flex align-items-center">

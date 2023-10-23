@@ -96,11 +96,20 @@ class Peserta extends BaseController {
     public function store() {
         $data = $this->request->getPost();
 
-        // $noKartukeluaraga = $data["no_kk"];
+        $idPenduduk = $data["id_penduduk"];
+        $noKK = $this->pendudukModel->select("no_kk")->where("id", $idPenduduk)->first();
 
-        // if($this->pesertaModel->where("no_kk", $noKartukeluaraga)->first()){
-        //     return $this->
-        // }
+
+        // return $this->respond($this->pesertaModel->findDoubleKK($noKK), 200);
+
+        if ($this->pesertaModel->findDoubleKK($noKK)) {
+            return $this->respond([
+                'status' => 'error',
+                'error' => [
+                    "id_penduduk" => "No. KK Penduduk yang anda inputkan sudah terdaftar sebagai peserta. Satu KK hanya boleh menerima 1 NIK."
+                ]
+            ], 400);
+        }
 
         $this->pesertaModel->save($data);
 
