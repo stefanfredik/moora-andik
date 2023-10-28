@@ -29,7 +29,7 @@
 
 
     <div class="col-lg-3 mb-4">
-        <a class="card bg-blue-soft text-white lift" href="/peserta">
+        <a class="card bg-blue-soft text-white lift" href="/datapeserta">
             <div class="card-body d-flex justify-content-center flex-column">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="me-3">
