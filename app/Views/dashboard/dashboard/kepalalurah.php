@@ -1,6 +1,6 @@
 <div class="row">
-    <div class="col-lg-3 mb-4">
-        <a class="card lift h-100" href="/datapenduduk">
+    <div class="col-lg-4">
+        <a class="card lift " href="/datapenduduk">
             <div class="card-body d-flex justify-content-center flex-column">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="me-3">
@@ -8,15 +8,13 @@
                         <h5>Data Penduduk</h5>
                         <div class="text-primary small">Data Penduduk</div>
                     </div>
-                    <i class="bi bi-people-fill fa-5x text-primary"></i>
                 </div>
             </div>
         </a>
     </div>
 
-    <div class="col-lg-3 mb-4">
-        <!-- Dashboard example card 3-->
-        <a class="card lift bg-success" href="/laporan/bantuan">
+    <div class="col-lg-4">
+        <a class="card lift bg-blue" href="/laporan/bantuan">
             <div class="card-body d-flex justify-content-center flex-column">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="me-3">
@@ -29,9 +27,9 @@
         </a>
     </div>
 
-    <div class="col-lg-3 mb-4">
+    <div class="col-lg-4">
         <!-- Dashboard example card 3-->
-        <a class="card lift bg-success" href="/laporan/penduduk">
+        <a class="card lift bg-purple" href="/laporan/penduduk">
             <div class="card-body d-flex justify-content-center flex-column">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="me-3">
