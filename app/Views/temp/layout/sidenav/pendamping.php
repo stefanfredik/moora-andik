@@ -29,6 +29,7 @@
         Laporan
         <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
     </a>
+
     <div class="collapse" id="laporan" data-bs-parent="#accordionSidenav">
         <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
             <a class="nav-link <?= url_is("/laporan/bantuan") ? 'active' : '' ?>" href="/laporan/bantuan">Data Bantuan</a>

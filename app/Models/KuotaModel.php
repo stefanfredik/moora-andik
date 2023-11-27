@@ -4,8 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class KuotaModel extends Model
-{
+class KuotaModel extends Model {
     protected $DBGroup          = 'default';
     protected $table            = 'kuota';
     protected $primaryKey       = 'id';
@@ -14,5 +13,5 @@ class KuotaModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id', 'tahun', 'periode', 'jumlah_kuota', 'tanggal_terima', 'keterangan'];
+    protected $allowedFields    = ['id', 'tahun', 'periode', 'jumlah_kuota', 'tanggal_daftar_mulai', 'tanggal_daftar_selesai', 'tanggal_seleksi_mulai', 'tanggal_seleksi_selesai', 'tanggal_terima_mulai', 'tanggal_terima_selesai', 'keterangan'];
 }

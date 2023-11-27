@@ -3,8 +3,7 @@
 <?= $this->section("content"); ?>
 <div class="row">
     <div class="col">
-        <button data-url="<?= '/' . $meta['url'] . '/tambah'; ?>" class="my-2 btn btn-white" onclick="add(this)"><i class="bi bi-plus-circle mx-1"></i>Tambah Data</button>
-
+        <button data-url="<?= '/' . $meta['url'] . '/tambah'; ?>" class="my-2 btn btn-white" onclick="add(this)"><i class="bi bi-plus-circle mx-1"></i>Tambah Periode</button>
         <div class="card">
             <div class="card-header">
                 <h3><?= $title; ?></h3>

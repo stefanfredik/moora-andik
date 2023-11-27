@@ -10,16 +10,14 @@ use App\Models\PesertaModel;
 use App\Models\PendudukModel;
 use App\Models\SubkriteriaModel;
 
-class Keputusan extends BaseController
-{
+class Keputusan extends BaseController {
     var $meta = [
         'url' => 'keputusan',
         'title' => 'Data Keputusan',
         'subtitle' => 'Halaman Keputusan'
     ];
 
-    public function __construct()
-    {
+    public function __construct() {
         $this->kriteriaModel = new KriteriaModel();
         $this->pendudukModel = new PendudukModel();
         $this->subkriteriaModel = new SubkriteriaModel();
@@ -27,8 +25,7 @@ class Keputusan extends BaseController
         $this->kuotaModel = new KuotaModel();
     }
 
-    public function index()
-    {
+    public function index() {
         $kriteria       = $this->kriteriaModel->findAll();
         $subkriteria    = $this->subkriteriaModel->findAll();
         $peserta        = $this->pesertaModel->findAllPeserta();
@@ -55,8 +52,7 @@ class Keputusan extends BaseController
         return view('/keputusan/index', $data);
     }
 
-    private function statusKeputusan($dataPeserta, $dataKuota)
-    {
+    private function statusKeputusan($dataPeserta, $dataKuota) {
         $kuotaTahun = [];
         foreach ($dataKuota as $row) {
             $tahun = $row['tahun'];

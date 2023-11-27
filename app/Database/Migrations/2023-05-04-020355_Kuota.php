@@ -4,10 +4,8 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Kuota extends Migration
-{
-    public function up()
-    {
+class Kuota extends Migration {
+    public function up() {
         $data = [
             'id' => [
                 'type'  => 'INT',
@@ -27,7 +25,24 @@ class Kuota extends Migration
                 'type'  => 'INT',
             ],
 
-            'tanggal_terima' => [
+            'tanggal_daftar_mulai' => [
+                'type'  => 'DATE',
+            ],
+            'tanggal_daftar_selesai' => [
+                'type'  => 'DATE',
+            ],
+
+            'tanggal_seleksi_mulai' => [
+                'type'  => 'DATE',
+            ],
+            'tanggal_seleksi_selesai' => [
+                'type'  => 'DATE',
+            ],
+
+            'tanggal_terima_mulai' => [
+                'type'  => 'DATE',
+            ],
+            'tanggal_terima_selesai' => [
                 'type'  => 'DATE',
             ],
 
@@ -44,8 +59,7 @@ class Kuota extends Migration
         $this->forge->createTable('kuota');
     }
 
-    public function down()
-    {
+    public function down() {
         $this->forge->dropTable('kuota');
     }
 }

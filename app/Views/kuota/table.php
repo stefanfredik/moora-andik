@@ -6,6 +6,8 @@
                 <th>Tahun</th>
                 <th>Periode</th>
                 <th>Jumlah Kuota</th>
+                <th>Tanggal Daftar</th>
+                <th>Tanggal Seleksi</th>
                 <th>Tanggal Terima</th>
                 <th>Keterangan</th>
                 <th>Opsi</th>
@@ -20,8 +22,12 @@
                     <td><?= $dt['tahun']; ?></td>
                     <td><?= $dt['periode']; ?></td>
                     <td><?= $dt['jumlah_kuota']; ?></td>
-                    <td><?= $dt['tanggal_terima']; ?></td>
+                    <td><?= $dt['tanggal_daftar_mulai'] . " - " . $dt['tanggal_daftar_selesai'];  ?></td>
+                    <td><?= $dt['tanggal_seleksi_mulai'] . " - " .  $dt['tanggal_seleksi_selesai']; ?></td>
+                    <td><?= $dt['tanggal_terima_mulai'] . " - " . $dt['tanggal_terima_selesai']; ?></td>
+
                     <td><?= $dt['keterangan']; ?></td>
+
                     <td style="text-align: center" width="120px">
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <button onclick="remove('<?= $url; ?>', this)" class="btn btn-sm text-white btn-danger" data-id="<?= $dt['id'] ?>"><i class="bi bi-trash mr-2"></i></button>
