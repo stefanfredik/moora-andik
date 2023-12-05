@@ -64,11 +64,6 @@
         Data Keputusan
     </a>
 
-    <a class="nav-link <?= url_is("/kalender") ? 'active' : '' ?>" href="/kalender">
-        <div class="nav-link-icon"><i data-feather="percent"></i></div>
-        Data Kalender
-    </a>
-
     <div class="sidenav-menu-heading">Laporan</div>
     <!-- <a class="nav-link" href="/laporan">
         <div class="nav-link-icon"><i data-feather="hard-drive"></i></div>
