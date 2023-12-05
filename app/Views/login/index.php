@@ -19,31 +19,33 @@
                                 <hr class="hr">
                                 <p>Berikut informasi terkait jadwal Program PKH Keluarga miskin Kelurahan Panjer</p>
                             </div>
-                            <table class="table border border-rounded">
-                                <thead>
-                                    <tr>
-                                        <th>Tahun.</th>
-                                        <th>Periode</th>
-                                        <th>Tanggal Pendafatan</th>
-                                        <th>Tanggal Seleksi</th>
-                                        <th>Tanggal Penerimaan</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $no = 1;
-
-                                    foreach ($dataKuota as $dt) : ?>
+                            <div class="table-responsive">
+                                <table class="table border border-rounded">
+                                    <thead>
                                         <tr>
-                                            <td><?= $dt['tahun']; ?></td>
-                                            <td><?= $dt['periode']; ?></td>
-                                            <td><?= rangeTanggal($dt['tanggal_daftar_mulai'], $dt['tanggal_daftar_selesai']);  ?></td>
-                                            <td><?= $dt['tanggal_seleksi_mulai'] . " - " .  $dt['tanggal_seleksi_selesai']; ?></td>
-                                            <td><?= $dt['tanggal_terima_mulai'] . " - " . $dt['tanggal_terima_selesai']; ?></td>
+                                            <th>Tahun.</th>
+                                            <th>Periode</th>
+                                            <th>Tanggal Pendafatan</th>
+                                            <th>Tanggal Seleksi</th>
+                                            <th>Tanggal Penerimaan</th>
                                         </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
+                                    </thead>
+                                    <tbody>
+                                        <?php $no = 1;
 
-                            </table>
+                                        foreach ($dataKuota as $dt) : ?>
+                                            <tr>
+                                                <td><?= $dt['tahun']; ?></td>
+                                                <td><?= $dt['periode']; ?></td>
+                                                <td class="text-nowrap"><?= rangeTanggalId($dt['tanggal_daftar_mulai'], $dt['tanggal_daftar_selesai']);  ?></td>
+                                                <td class="text-nowrap"><?= rangeTanggalId($dt['tanggal_seleksi_mulai'], $dt['tanggal_seleksi_selesai']) ?></td>
+                                                <td class="text-nowrap"><?= rangeTanggalId($dt['tanggal_terima_mulai'], $dt['tanggal_terima_selesai']) ?></td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+
+                                </table>
+                            </div>
                         </div>
 
                         <div class="col-lg-4 col-md-4 col-sm-11">
