@@ -78,7 +78,7 @@ class Keputusan extends BaseController {
                     $dataPeserta[$key]['status'] = 'Mendapatkan Bantuan';
                     if ($rangking <= $kuotaPeriode) {
                         $dataPeserta[$key]['periode'] = $ku['periode'];
-                        $dataPeserta[$key]['tanggalTerima'] = $ku['tanggal_terima'];
+                        $dataPeserta[$key]['tanggalTerima'] = $ku['tanggal_terima_mulai'] . " - " . $ku['tanggal_terima_selesai'];
                         break;
                     }
                 } else {
