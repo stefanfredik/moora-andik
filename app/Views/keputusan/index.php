@@ -35,7 +35,7 @@
                                     <td><?= $ps['kriteria_nilai']; ?></td>
                                     <td><span class="badge <?= $ps['status'] == 'Mendapatkan Bantuan' ? 'bg-success' : 'bg-danger'; ?>"><?= $ps['status']; ?></span></td>
                                     <td><?= @$ps['periode']; ?></td>
-                                    <td><?= @$ps['tanggalTerima']; ?></td>
+                                    <td class="text-nowrap"><?= @$ps['tanggalTerima']; ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
