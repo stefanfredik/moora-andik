@@ -108,7 +108,7 @@ class Laporan extends BaseController {
                     $dataPeserta[$key]['status'] = 'Mendapatkan Bantuan';
                     if ($rangking <= $kuotaPeriode) {
                         $dataPeserta[$key]['periode'] = $ku['periode'];
-                        $dataPeserta[$key]['tanggalTerima'] = $ku['tanggal_terima_mulai'] . " - " . $ku['tanggal_terima_selesai'];
+                        $dataPeserta[$key]['tanggalTerima'] = rangeTanggalId($ku['tanggal_terima_mulai'], $ku['tanggal_terima_selesai']);
                         break;
                     }
                 } else {

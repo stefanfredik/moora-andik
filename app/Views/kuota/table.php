@@ -22,9 +22,9 @@
                     <td><?= $dt['tahun']; ?></td>
                     <td><?= $dt['periode']; ?></td>
                     <td><?= $dt['jumlah_kuota']; ?></td>
-                    <td><?= $dt['tanggal_daftar_mulai'] . " - " . $dt['tanggal_daftar_selesai'];  ?></td>
-                    <td><?= $dt['tanggal_seleksi_mulai'] . " - " .  $dt['tanggal_seleksi_selesai']; ?></td>
-                    <td><?= $dt['tanggal_terima_mulai'] . " - " . $dt['tanggal_terima_selesai']; ?></td>
+                    <td class="text-nowrap"><?= rangeTanggalId($dt['tanggal_daftar_mulai'], $dt['tanggal_daftar_selesai'])  ?></td>
+                    <td class="text-nowrap"><?= rangeTanggalId($dt['tanggal_seleksi_mulai'], $dt['tanggal_seleksi_selesai']) ?></td>
+                    <td class="text-nowrap"><?= rangeTanggalId($dt['tanggal_terima_mulai'], $dt['tanggal_terima_selesai']) ?></td>
 
                     <td><?= $dt['keterangan']; ?></td>
 

@@ -36,7 +36,7 @@
                     <td><?= $dt['kriteria_nilai']; ?></td>
                     <td><?= $no; ?></td>
                     <td><?= $dt['status']; ?></td>
-                    <td><?= $dt['tanggalTerima']; ?></td>
+                    <td class="text-nowrap"><?= $dt['tanggalTerima']; ?></td>
                 </tr>
         <?php endif;
         endforeach; ?>
