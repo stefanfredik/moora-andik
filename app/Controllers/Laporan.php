@@ -9,15 +9,18 @@ use App\Models\KuotaModel;
 use App\Models\PesertaModel;
 use App\Models\SubkriteriaModel;
 use Dompdf\Dompdf;
+use Dompdf\Options;
 
-class Laporan extends BaseController {
+class Laporan extends BaseController
+{
     var $meta = [
         'url' => 'laporan',
         'title' => 'Laporan',
         'subtitle' => 'Halaman Laporan'
     ];
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->kriteriaModel = new KriteriaModel();
         $this->subkriteriaModel = new SubkriteriaModel();
         $this->pesertaModel = new PesertaModel();
@@ -25,7 +28,8 @@ class Laporan extends BaseController {
     }
 
 
-    public function bantuan() {
+    public function bantuan()
+    {
         $data = $this->data();
         $this->meta['subtitle'] = "Data Dana Bantuan";
 
@@ -36,7 +40,8 @@ class Laporan extends BaseController {
         return view("laporan/databantuan", $data);
     }
 
-    public function penduduk() {
+    public function penduduk()
+    {
         $data = $this->data();
         $this->meta['subtitle'] = "Data Penduduk";
 
@@ -46,20 +51,23 @@ class Laporan extends BaseController {
         return view("laporan/datapenduduk", $data);
     }
 
-    public function cetakBantuan() {
+    public function cetakBantuan()
+    {
         $data = $this->data();
         $data["title"] = 'LAPORAN ' . APP_DESC;
         $this->pdf($data, "laporan/cetakBantuan");
     }
 
 
-    public function cetakPenduduk() {
+    public function cetakPenduduk()
+    {
         $data = $this->data();
         $data["title"] = 'LAPORAN ' . APP_DESC;
         $this->pdf($data, "laporan/cetakPenduduk");
     }
 
-    private function data() {
+    private function data()
+    {
         $peserta = $this->pesertaModel->findAllPeserta();
         $kriteria = $this->kriteriaModel->findAll();
         $subkriteria = $this->subkriteriaModel->findAll();
@@ -81,7 +89,8 @@ class Laporan extends BaseController {
     }
 
 
-    private function statusKeputusan($dataPeserta, $dataKuota) {
+    private function statusKeputusan($dataPeserta, $dataKuota)
+    {
         // hitung kuota tahunan
         $kuotaTahun = [];
         foreach ($dataKuota as $row) {
@@ -125,11 +134,23 @@ class Laporan extends BaseController {
 
 
 
-    private function pdf(array $data, String $view) {
-        $pdf = new Dompdf(array('DOMPDF_ENABLE_REMOTE' => true));
+    private function pdf(array $data, String $view)
+    {
+        $options = new Options();
+        $options->set('isHtml5ParserEnabled', true);
+        $options->set('isPhpEnabled', true);
+
+        $pdf = new Dompdf($options);
+        // $pdf = new Dompdf(array('DOMPDF_ENABLE_REMOTE' => true));
 
         $html = view($view, $data);
         $pdf->loadHtml($html);
+
+        // Set margins
+        $pdf->set_option('margin-top', '10mm');
+        $pdf->set_option('margin-right', '15mm');
+        $pdf->set_option('margin-bottom', '10mm');
+        $pdf->set_option('margin-left', '15mm');
         $pdf->setPaper('LEGAL', 'landscape');
         $pdf->render();
         return $pdf->stream();

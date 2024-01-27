@@ -1,4 +1,4 @@
-<table class="table table-bordered" id="table" width="100%" colspacing="0">
+<table class="table table-bordered" id="table" width="100%" style="font-size: small;" colspacing="0">
     <thead>
         <tr>
             <th class="text-center">No</th>
@@ -6,12 +6,12 @@
             <th class="text-center">NIK</th>
             <th class="text-center">No. KK</th>
             <th class="text-center">Nama</th>
-            <th class="text-center">Alamat</th>
-            <th class="text-center">Kelurahan</th>
+            <th class="text-center" style="word-wrap: break-word;">Alamat</th>
+            <th class=" text-center">Kelurahan</th>
             <th class="text-center">Kecamatan</th>
             <th class="text-center">Kabupaten</th>
             <?php foreach ($dataKriteria as $dt) : ?>
-                <th><?= $dt['keterangan']; ?></th>
+                <th style="word-wrap: normal;"><?= $dt['keterangan']; ?></th>
             <?php endforeach; ?>
 
             <!-- <th class="text-center">Status</th> -->
@@ -28,12 +28,12 @@
                     <td><?= $dt['nik']; ?></td>
                     <td><?= $dt['no_kk']; ?></td>
                     <td><?= $dt['nama_lengkap']; ?></td>
-                    <td><?= $dt['alamat']; ?></td>
+                    <td><?= ucwords($dt['alamat']); ?></td>
                     <td><?= $dt['kelurahan']; ?></td>
                     <td><?= $dt['kecamatan']; ?></td>
                     <td><?= $dt['kabupaten']; ?></td>
                     <?php foreach ($dt['data_kriteria'] as $key => $dk) : ?>
-                        <td><?= $dk; ?></td>
+                        <td style="word-wrap: wrap; width: 80px;"><?= $dk; ?></td>
                     <?php endforeach; ?>
                     <!-- <td><?= $dt['status']; ?></td> -->
                 </tr>
