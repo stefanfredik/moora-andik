@@ -36,7 +36,6 @@
                         <td><?= $dk; ?></td>
                     <?php endforeach; ?>
                     <!-- <td><?= $dt['status']; ?></td> -->
-
                 </tr>
         <?php endif;
         endforeach; ?>

@@ -42,12 +42,18 @@ class Perhitungan extends BaseController
         if ($check) return view('/error/index', ['title' => 'Error', 'listError' => $check]);
 
         $moora = new Moora($peserta, $kriteria, $subkriteria);
+        $peserta = $moora->getAllPeserta();
+
+        $moora->sortPeserta();
+        $moora->setRangking();
+        $pesertaRangking = $moora->getAllPeserta();
 
         $data = [
             'title' => 'Data Perhitungan dan Table Moora',
             'dataKriteria' => $this->kriteriaModel->findAll(),
             'totalNilaiKriteria' => $this->totalNilaiKriteria,
-            'peserta' => $moora->getAllPeserta(),
+            'peserta' => $peserta,
+            'pesertaRangking' => $pesertaRangking,
             'jumKriteriaBenefit' => $moora->jumKriteriaBenefit,
             'jumKriteriaCost' => $moora->jumKriteriaCost,
             'dataSubkriteria' => $this->subkriteriaModel->findAll(),

@@ -195,9 +195,6 @@
                                     <th><?= $dt['keterangan']; ?></th>
                                 <?php endforeach; ?>
                             </tr>
-                            <tr>
-
-                            </tr>
                         </thead>
                         <tbody>
                             <?php
@@ -287,6 +284,7 @@
                         <thead>
                             <tr>
                                 <th width="80px">No</th>
+                                <th width="80px">Rangking</th>
                                 <th>Peserta</th>
                                 <th>Max</th>
                                 <th>Min</th>
@@ -295,11 +293,12 @@
                         </thead>
                         <tbody>
                             <?php
-                            $no = 1;
+                            $no = 0;
                             foreach ($peserta as $ps) :
                             ?>
                                 <tr>
-                                    <td><?= $no++; ?></td>
+                                    <td><?= ++$no; ?></td>
+                                    <td class="text-center "><span class="bg-primary rounded p-2 text-white ""><?= $no ?> </span></td>
                                     <td><?= $ps['nama_lengkap']; ?></td>
                                     <td><?= $ps['kriteria_max']; ?></td>
                                     <td><?= $ps['kriteria_min']; ?></td>
@@ -318,6 +317,12 @@
 
 <?= $this->section('script'); ?>
 <script>
-
-</script>
-<?= $this->endSection(); ?>
+    $('table').DataTable({
+        columnDefs: [{
+            width: 20,
+            targets: 0
+        }],
+        language: {
+            paginate: {
+                first: " Awal", last: "Akhir" , next: '<i class="bi bi-arrow-right-circle"></i>' , previous: '<i class="bi bi-arrow-left-circle"></i>' }, zeroRecords: "Belum ada data." , search: "Cari:" , lengthMenu: "Tampil _MENU_ kolom" , info: "Kolom _START_ sampai _END_ dari _TOTAL_ kolom" } }) </script>
+                                            <?= $this->endSection(); ?>
