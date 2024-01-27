@@ -294,7 +294,7 @@
                         <tbody>
                             <?php
                             $no = 0;
-                            foreach ($peserta as $ps) :
+                            foreach ($pesertaRangking as $ps) :
                             ?>
                                 <tr>
                                     <td><?= ++$no; ?></td>
