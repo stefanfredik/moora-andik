@@ -14,7 +14,7 @@
                 <th><?= $dt['keterangan']; ?></th>
             <?php endforeach; ?>
 
-            <th class="text-center">Status</th>
+            <!-- <th class="text-center">Status</th> -->
         </tr>
     </thead>
     <tbody>
@@ -35,7 +35,7 @@
                     <?php foreach ($dt['data_kriteria'] as $key => $dk) : ?>
                         <td><?= $dk; ?></td>
                     <?php endforeach; ?>
-                    <td><?= $dt['status']; ?></td>
+                    <!-- <td><?= $dt['status']; ?></td> -->
 
                 </tr>
         <?php endif;

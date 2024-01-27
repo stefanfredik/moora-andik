@@ -13,8 +13,8 @@
             <th class="text-center">Kabupaten</th>
             <th class="text-center">Nilai</th>
             <th class="text-center">Rangking</th>
-            <th class="text-center">Status</th>
-            <th class="text-center">Waktu Terima</th>
+            <!-- <th class="text-center">Status</th>
+            <th class="text-center">Waktu Terima</th> -->
         </tr>
     </thead>
     <tbody>
@@ -35,8 +35,8 @@
                     <td><?= $dt['kabupaten']; ?></td>
                     <td><?= $dt['kriteria_nilai']; ?></td>
                     <td><?= $no; ?></td>
-                    <td><?= $dt['status']; ?></td>
-                    <td class="text-nowrap"><?= $dt['tanggalTerima']; ?></td>
+                    <!-- <td><?= $dt['status']; ?></td>
+                    <td class="text-nowrap"><?= $dt['tanggalTerima']; ?></td> -->
                 </tr>
         <?php endif;
         endforeach; ?>

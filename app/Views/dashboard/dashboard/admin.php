@@ -56,8 +56,9 @@
         </a>
     </div>
 </div>
+
 <div class="row">
-    <div class="col-lg-4 mb-4">
+    <div class="col-lg mb-4">
         <a class="card lift bg-cyan text-white " href="/subkriteria">
             <div class="card-body d-flex justify-content-center flex-column">
                 <div class="d-flex align-items-center justify-content-between">
@@ -71,7 +72,7 @@
         </a>
     </div>
 
-    <div class="col-lg-4 mb-4">
+    <div class="col-lg mb-4">
         <!-- Dashboard example card 1-->
         <a class="card lift  bg-purple" href="/perhitungan">
             <div class="card-body d-flex justify-content-center flex-column">
@@ -85,9 +86,9 @@
             </div>
         </a>
     </div>
-    <div class="col-lg-4 mb-4">
-        <!-- Dashboard example card 2-->
-        <a class="card lift bg-teal text-white" href="/keputusan">
+    <!-- <div class="col-lg-4 mb-4"> -->
+    <!-- Dashboard example card 2-->
+    <!-- <a class="card lift bg-teal text-white" href="/keputusan">
             <div class="card-body d-flex justify-content-center flex-column">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="me-3">
@@ -97,8 +98,8 @@
                     </div>
                 </div>
             </div>
-        </a>
-    </div>
+        </a> -->
+    <!-- </div> -->
 </div>
 <div class="row">
 

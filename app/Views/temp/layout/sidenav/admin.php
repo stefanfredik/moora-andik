@@ -59,10 +59,10 @@
         Data Moora
     </a>
 
-    <a class="nav-link <?= url_is("/keputusan") ? 'active' : '' ?>" href="/keputusan">
+    <!-- <a class="nav-link <?= url_is("/keputusan") ? 'active' : '' ?>" href="/keputusan">
         <div class="nav-link-icon"><i data-feather="percent"></i></div>
         Data Keputusan
-    </a>
+    </a> -->
 
     <div class="sidenav-menu-heading">Laporan</div>
     <!-- <a class="nav-link" href="/laporan">
