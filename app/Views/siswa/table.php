@@ -3,32 +3,25 @@
         <thead>
             <tr>
                 <th>No</th>
-                <th>NIK</th>
-                <th>No. KK</th>
+                <th>NISN</th>
                 <th>Nama Lengkap</th>
+                <th>Jenis Kelamin</th>
                 <th>Alamat</th>
-                <th>Kelurahan</th>
-                <th>Kecamatan</th>
-                <th>Kabupaten</th>
-                <th>Provinsi</th>
+                <th>Kelas</th>
                 <th>Opsi</th>
             </tr>
         </thead>
 
         <tbody>
             <?php $no = 1;
-            foreach ($dataPenduduk as $dt) : ?>
+            foreach ($dataSiswa as $dt) : ?>
                 <tr>
                     <td><?= $no++ ?></td>
-                    <td><?= $dt['nik'] ?></td>
-                    <td><?= $dt['no_kk'] ?></td>
-                    <td><?= $dt['nama_lengkap'] ?></td>
+                    <td><?= $dt['nisn'] ?></td>
+                    <td><?= $dt['nama_siswa'] ?></td>
+                    <td><?= $dt['jenis_kelamin'] ?></td>
                     <td><?= $dt['alamat'] ?></td>
-                    <td><?= $dt['kelurahan'] ?></td>
-                    <td><?= $dt['kecamatan'] ?></td>
-                    <td><?= $dt['kabupaten'] ?></td>
-                    <td><?= $dt['provinsi'] ?></td>
-
+                    <td><?= $dt['kelas'] ?></td>
                     <td style="text-align: center" width="120px">
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <?php if (in_groups('admin')) : ?>

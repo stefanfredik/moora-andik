@@ -73,20 +73,20 @@ $routes->group('subkriteria', static function ($router) {
 
 
 
-$routes->group('datapenduduk', static function ($router) {
-    $router->get('/', 'Datapenduduk::index');
-    $router->get('table', 'Datapenduduk::table');
-    $router->get('tambah', 'Datapenduduk::tambah');
-    $router->get('(:num)', 'Datapenduduk::edit/$1');
-    $router->get('upload', 'Datapenduduk::upload');
-    $router->get('detail/(:num)', 'Datapenduduk::detail/$1');
-    $router->get('delete/(:num)', 'Datapenduduk::delete/$1');
+$routes->group('datasiswa', static function ($router) {
+    $router->get('/', 'Datasiswa::index');
+    $router->get('table', 'Datasiswa::table');
+    $router->get('tambah', 'Datasiswa::tambah');
+    $router->get('(:num)', 'Datasiswa::edit/$1');
+    $router->get('upload', 'Datasiswa::upload');
+    $router->get('detail/(:num)', 'Datasiswa::detail/$1');
+    $router->get('delete/(:num)', 'Datasiswa::delete/$1');
 
-    $router->post('/', 'Datapenduduk::store');
-    $router->post("(:num)", "Datapenduduk::update/$1");
-    $router->post('upload', 'Datapenduduk::doupload');
+    $router->post('/', 'Datasiswa::store');
+    $router->post("(:num)", "Datasiswa::update/$1");
+    $router->post('upload', 'Datasiswa::doupload');
 
-    $router->delete("(:num)", "Datapenduduk::delete/$1");
+    $router->delete("(:num)", "Datasiswa::delete/$1");
 });
 
 
@@ -149,9 +149,9 @@ $routes->group('kuota', static function ($router) {
 $routes->group("laporan", static function ($router) {
     // $router->get("/", "Laporan::index");
     $router->get("bantuan", "Laporan::bantuan");
-    $router->get("penduduk", "Laporan::penduduk");
+    $router->get("siswa", "Laporan::siswa");
 
-    $router->get("cetakpenduduk", "Laporan::cetakPenduduk");
+    $router->get("cetaksiswa", "Laporan::cetaksiswa");
     $router->get("cetakbantuan", "Laporan::cetakBantuan");
 });
 

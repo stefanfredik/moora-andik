@@ -5,27 +5,30 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\KriteriaModel;
 use App\Models\PesertaModel;
-use App\Models\PendudukModel;
+use App\Models\SiswaModel;
 use App\Models\SubkriteriaModel;
 use CodeIgniter\API\ResponseTrait;
 
-class Peserta extends BaseController {
+class Peserta extends BaseController
+{
     use ResponseTrait;
     var $meta = [
         'url' => 'datapeserta',
-        'title' => 'Data Pengajuan',
-        'subtitle' => 'Halaman Pengajuan'
+        'title' => 'Data Peserta',
+        'subtitle' => 'Halaman Data Peserta'
     ];
 
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->pesertaModel = new PesertaModel();
-        $this->pendudukModel = new PendudukModel();
+        $this->siswaModel = new SiswaModel();
         $this->kriteriaModel = new KriteriaModel();
         $this->subKriteriaModel = new SubkriteriaModel();
     }
 
-    public function index() {
+    public function index()
+    {
 
         $data = [
             'title' => $this->meta["title"],
@@ -35,7 +38,8 @@ class Peserta extends BaseController {
         return view('/peserta/index', $data);
     }
 
-    public function table() {
+    public function table()
+    {
         $data = [
             'title' => $this->meta["title"],
             'meta'   => $this->meta,
@@ -45,11 +49,12 @@ class Peserta extends BaseController {
         return view('/peserta/table', $data);
     }
 
-    public function tambah() {
+    public function tambah()
+    {
         $data = [
             'title' => "Tambah " . $this->meta["title"],
             'meta'   => $this->meta,
-            'dataPenduduk' => $this->pendudukModel->findAllNonPeserta(),
+            'dataSiswa' => $this->siswaModel->findAllNonPeserta(),
             'dataKriteria' => $this->kriteriaModel->findAll(),
             'dataSubkriteria' => $this->subKriteriaModel->findAll(),
             'dataPeserta' => $this->pesertaModel->findAll(),
@@ -58,11 +63,12 @@ class Peserta extends BaseController {
         return view('/peserta/tambah', $data);
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $data = [
-            'title' => 'Edit Data Penduduk Terdaftar',
+            'title' => 'Edit Data Siswa Terdaftar',
             'meta'   => $this->meta,
-            'dataPenduduk' => $this->pendudukModel->findAll(),
+            'dataSiswa' => $this->siswaModel->findAll(),
             'dataKriteria' => $this->kriteriaModel->findAll(),
             'dataSubkriteria' => $this->subKriteriaModel->findAll(),
             'peserta' => $this->pesertaModel->find($id),
@@ -74,39 +80,41 @@ class Peserta extends BaseController {
     }
 
 
-    public function detail($id) {
+    public function detail($id)
+    {
 
         $data = [
             'dataKriteria'  => $this->kriteriaModel->findAll(),
             'dataSubkriteria' => $this->subKriteriaModel->findAll(),
-            'dataPenduduk' => $this->pendudukModel->findAll(),
+            'dataSiswa' => $this->siswaModel->findAll(),
             'peserta' => $this->pesertaModel->findPeserta($id),
             'meta'   => $this->meta
         ];
 
         // dd($this->pesertaModel->findAllPeserta($id)[0]);
 
-        $data['title'] = 'Detail ' . $data['peserta']['nama_lengkap'];
+        $data['title'] = 'Detail ' . $data['peserta']['nama_siswa'];
         return $this->respond(view('/peserta/detail', $data), 200);
     }
 
     // CRUD
 
 
-    public function store() {
+    public function store()
+    {
         $data = $this->request->getPost();
 
-        $idPenduduk = $data["id_penduduk"];
-        $noKK = $this->pendudukModel->select("no_kk")->where("id", $idPenduduk)->first();
+        $idSiswa = $data["id_siswa"];
+        $nisn = $this->siswaModel->select("nisn")->where("id", $idSiswa)->first();
 
 
         // return $this->respond($this->pesertaModel->findDoubleKK($noKK), 200);
 
-        if ($this->pesertaModel->findDoubleKK($noKK)) {
+        if ($this->pesertaModel->findDoubleNisn($nisn)) {
             return $this->respond([
                 'status' => 'error',
                 'error' => [
-                    "id_penduduk" => "No. KK Penduduk yang anda inputkan sudah terdaftar sebagai peserta. Satu KK hanya boleh menerima 1 NIK."
+                    "id_siswa" => "NISN Siswa yang anda pilih sudah terdaftar."
                 ]
             ], 400);
         }
@@ -122,7 +130,8 @@ class Peserta extends BaseController {
         return $this->respond($res, 200);
     }
 
-    public function update($id) {
+    public function update($id)
+    {
         $data = $this->request->getPost();
         $this->pesertaModel->update($id, $data);
 
@@ -135,7 +144,8 @@ class Peserta extends BaseController {
     }
 
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $this->pesertaModel->delete($id);
         $res = [
             'status'    => 'success',

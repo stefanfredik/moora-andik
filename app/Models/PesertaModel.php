@@ -4,7 +4,8 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class PesertaModel extends Model {
+class PesertaModel extends Model
+{
     protected $DBGroup          = 'default';
     protected $table            = 'peserta';
     protected $primaryKey       = 'id';
@@ -13,28 +14,31 @@ class PesertaModel extends Model {
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = false;
-    protected $allowedFields    = ['id', 'id_penduduk', 'tahun', 'periode'];
+    protected $allowedFields    = ['id', 'id_siswa', 'tahun', 'periode'];
 
-    public function findAllPeserta() {
-        $this->select('datapenduduk.*');
+    public function findAllPeserta()
+    {
+        $this->select('datasiswa.*');
         $this->select('peserta.*');
-        $this->join('datapenduduk', 'datapenduduk.id = peserta.id_penduduk ');
+        $this->join('datasiswa', 'datasiswa.id = peserta.id_siswa ');
         return $this->findAll();
     }
 
-    public function findPeserta($id) {
+    public function findPeserta($id)
+    {
         $this->select('peserta.id as id_peserta');
-        $this->select('datapenduduk.*');
+        $this->select('datasiswa.*');
         $this->select('peserta.*');
-        $this->join('datapenduduk', 'datapenduduk.id = peserta.id_penduduk');
+        $this->join('datasiswa', 'datasiswa.id = peserta.id_siswa');
         return $this->find($id);
     }
 
 
-    public function findDoubleKK($noKK) {
+    public function findDoubleNisn($nisn)
+    {
         $this->select("*");
-        $this->where("datapenduduk.no_kk", $noKK);
-        $this->join('datapenduduk', 'datapenduduk.id = peserta.id_penduduk ');
+        $this->where("datasiswa.nisn", $nisn);
+        $this->join('datasiswa', 'datasiswa.id = peserta.id_siswa ');
         // return $this->findAll();
         $count = $this->countAllResults();
 

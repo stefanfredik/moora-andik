@@ -60,18 +60,18 @@
 
 
             <div style="display: inline-block;">
-                <img width="60px" src="<?= $renderDataBali; ?>" alt="">
+                <!-- <img width="60px" src="<?= $renderDataBali; ?>" alt=""> -->
             </div>
 
             <div style="display: inline-block; text-align: center; margin: 0 80px;">
-                <p style="margin: 0; font-weight: bold;">PEMERINTAH PROVINSI BALI</p>
-                <p style="margin: 0; font-weight: bold;">Kota Denpasar</p>
-                <p style="margin: 0; font-weight: bold;">Kelurahan Panjer</p>
-                <p style="margin: 0; font-size: small;">Jl. Tukad Pakerisan No. 65 Denpasar, Kode Pos 80225</p>
+                <p style="margin: 0; font-weight: bold;">PEMERINTAH PROVINSI NTT</p>
+                <p style="margin: 0; font-weight: bold;">Kabupaten Manggarai Barat</p>
+                <p style="margin: 0; font-weight: bold;">SMAN 2 Komodo</p>
+                <!-- <p style="margin: 0; font-size: small;">Jl. Tukad Pakerisan No. 65 Denpasar, Kode Pos 80225</p> -->
             </div>
 
             <div style="display: inline-block;">
-                <img width="60px" src="<?= $renderLogo; ?>" alt="">
+                <!-- <img width="60px" src="<?= $renderLogo; ?>" alt=""> -->
             </div>
         </div>
         <hr>

@@ -42,15 +42,15 @@
 
                     <div class="row mb-2">
                         <div class="col-md-4">
-                            <label class="form-label">Nama Penduduk</label>
+                            <label class="form-label">Nama Siswa</label>
                         </div>
 
 
                         <div class="col-md-8">
-                            <select class="form-control" name="id_penduduk" id="nama" required>
-                                <option value="">Pilih Penduduk</option>
-                                <?php foreach ($dataPenduduk as $dt) : ?>
-                                    <option value="<?= $dt['id']; ?>"><?= $dt['nama_lengkap']; ?></option>
+                            <select class="form-control" name="id_siswa" id="nama" required>
+                                <option value="">Pilih Siswa</option>
+                                <?php foreach ($dataSiswa as $dt) : ?>
+                                    <option value="<?= $dt['id']; ?>"><?= $dt['nama_siswa']; ?></option>
                                 <?php endforeach; ?>
                             </select>
                             <div id="invalidIdPenduduk" class="invalid-feedback"></div>

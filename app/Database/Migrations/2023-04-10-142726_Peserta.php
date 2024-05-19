@@ -13,7 +13,7 @@ class Peserta extends Migration
                 'type'  => 'INT',
                 'auto_increment'    => TRUE
             ],
-            'id_penduduk' => [
+            'id_siswa' => [
                 'type'  => 'INT',
             ],
             'tahun' => [

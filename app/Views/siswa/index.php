@@ -31,12 +31,12 @@
 </script>
 
 <script>
-    const formInput = ["no_kk"];
+    const formInput = ["nisn"];
 
     function validation(error) {
         resetForm(formInput);
-        if (error.no_kk) {
-            $("input[name='no_kk']").addClass("is-invalid").next().html(error.no_kk);
+        if (error.nisn) {
+            $("input[name='nisn']").addClass("is-invalid").next().html(error.nisn);
         }
     }
 

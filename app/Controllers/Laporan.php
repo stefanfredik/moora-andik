@@ -43,12 +43,12 @@ class Laporan extends BaseController
     public function penduduk()
     {
         $data = $this->data();
-        $this->meta['subtitle'] = "Data Penduduk";
+        $this->meta['subtitle'] = "Data Siswa";
 
         $data["meta"] =  $this->meta;
 
         // dd($data);
-        return view("laporan/datapenduduk", $data);
+        return view("laporan/datasiswa", $data);
     }
 
     public function cetakBantuan()

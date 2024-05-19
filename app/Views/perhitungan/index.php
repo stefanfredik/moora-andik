@@ -79,7 +79,7 @@
                             ?>
                                 <tr>
                                     <td><?= $no++; ?></td>
-                                    <td><?= $ps['nama_lengkap']; ?></td>
+                                    <td><?= $ps['nama_siswa']; ?></td>
                                     <?php foreach ($ps['data_kriteria'] as $key => $dk) : ?>
                                         <td><?= $dk; ?></td>
                                     <?php endforeach; ?>
@@ -120,7 +120,7 @@
                             ?>
                                 <tr>
                                     <td><?= $no++; ?></td>
-                                    <td><?= $ps['nama_lengkap']; ?></td>
+                                    <td><?= $ps['nama_siswa']; ?></td>
 
                                     <?php foreach ($ps['data_kriteria_nilai'] as $key => $dk) : ?>
                                         <td><?= $dk; ?></td>
@@ -163,7 +163,7 @@
                             ?>
                                 <tr>
                                     <td><?= $no++; ?></td>
-                                    <td><?= $ps['nama_lengkap']; ?></td>
+                                    <td><?= $ps['nama_siswa']; ?></td>
                                     <?php foreach ($ps['data_normalisasi'] as $key => $dn) : ?>
                                         <td><?= $dn ?></td>
                                     <?php endforeach; ?>
@@ -203,7 +203,7 @@
                             ?>
                                 <tr>
                                     <td><?= $no++; ?></td>
-                                    <td><?= $ps['nama_lengkap']; ?></td>
+                                    <td><?= $ps['nama_siswa']; ?></td>
                                     <?php foreach ($ps['data_optimasi'] as  $do) : ?>
                                         <td><?= $do ?></td>
                                     <?php endforeach; ?>
@@ -254,7 +254,7 @@
                             ?>
                                 <tr>
                                     <td style="text-align: center;"><?= $no++; ?></td>
-                                    <td style="text-align: left ;"><?= $ps['nama_lengkap']; ?></td>
+                                    <td style="text-align: left ;"><?= $ps['nama_siswa']; ?></td>
                                     <?php foreach ($ps['data_kriteria_benefit'] as $key => $dn) : ?>
                                         <td><?= $dn ?></td>
                                     <?php endforeach; ?>
@@ -299,7 +299,7 @@
                                 <tr>
                                     <td><?= ++$no; ?></td>
                                     <td class="text-center "><span class="bg-primary rounded p-2 text-white ""><?= $no ?> </span></td>
-                                    <td><?= $ps['nama_lengkap']; ?></td>
+                                    <td><?= $ps['nama_siswa']; ?></td>
                                     <td><?= $ps['kriteria_max']; ?></td>
                                     <td><?= $ps['kriteria_min']; ?></td>
                                     <td><?= $ps['kriteria_nilai']; ?></td>

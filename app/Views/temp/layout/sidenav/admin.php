@@ -27,9 +27,9 @@
     </a>
 
 
-    <a class="nav-link <?= url_is("/datapenduduk") ? 'active' : '' ?>" href="/datapenduduk">
+    <a class="nav-link <?= url_is("/datasiswa") ? 'active' : '' ?>" href="/datasiswa">
         <div class="nav-link-icon"><i data-feather="layers"></i></div>
-        Data Penduduk
+        Data Siswa
     </a>
     <hr class="hr">
 
@@ -45,13 +45,13 @@
 
     <a class="nav-link <?= url_is("/datapeserta") ? 'active' : '' ?>" href="/datapeserta">
         <div class="nav-link-icon"><i data-feather="file-text"></i></div>
-        Data Pengajuan
+        Data Peserta
     </a>
 
     <div class="sidenav-menu-heading">Pengelolahan</div>
     <a class="nav-link <?= url_is("/kuota") ? 'active' : '' ?>" href="/kuota">
         <div class="nav-link-icon"><i data-feather="percent"></i></div>
-        Data Kuota dan Periode
+        Tahap Beasiswa
     </a>
 
     <a class="nav-link <?= url_is("/perhitungan") ? 'active' : '' ?>" href="/perhitungan">
@@ -78,7 +78,7 @@
     <div class="collapse" id="laporan" data-bs-parent="#accordionSidenav">
         <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
             <a class="nav-link <?= url_is("/laporan/bantuan") ? 'active' : '' ?>" href="/laporan/bantuan">Data Bantuan</a>
-            <a class="nav-link <?= url_is("/laporan/penduduk") ? 'active' : '' ?>" href="/laporan/penduduk">Penduduk</a>
+            <a class="nav-link <?= url_is("/laporan/siswa") ? 'active' : '' ?>" href="/laporan/datasiswa">Siswa</a>
         </nav>
     </div>
 

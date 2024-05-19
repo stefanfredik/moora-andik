@@ -3,35 +3,35 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\PendudukModel;
+use App\Models\SiswaModel;
 use CodeIgniter\API\ResponseTrait;
 
-class Datapenduduk extends BaseController
+class Datasiswa extends BaseController
 {
     use ResponseTrait;
 
     var $meta = [
-        'url' => 'datapenduduk',
-        'title' => 'Data Penduduk',
-        'subtitle' => 'Halaman Penduduk'
+        'url' => 'datasiswa',
+        'title' => 'Data Siswa',
+        'subtitle' => 'Halaman Siswa'
     ];
 
 
     public function __construct()
     {
-        $this->pendudukModel = new PendudukModel();
+        $this->siswaModel = new siswaModel();
     }
 
     public function index()
     {
 
         $data = [
-            'title' => 'Data Penduduk',
+            'title' => 'Data Siswa',
             'meta'   => $this->meta,
             'meta'  => $this->meta
         ];
 
-        return view('/penduduk/index', $data);
+        return view('/siswa/index', $data);
     }
 
     public function tambah()
@@ -40,22 +40,22 @@ class Datapenduduk extends BaseController
 
 
         $data = [
-            'title' => 'Tambah Data Penduduk',
+            'title' => 'Tambah Data Siswa',
             'meta'   => $this->meta
         ];
 
-        return view('/penduduk/tambah', $data);
+        return view('/siswa/tambah', $data);
     }
 
     public function table()
     {
         $data = [
-            'title' => 'Data Penduduk',
+            'title' => 'Data siswa',
             'meta'   => $this->meta,
-            'dataPenduduk' => $this->pendudukModel->findAll(),
+            'dataSiswa' => $this->siswaModel->findAll(),
         ];
 
-        return view('/penduduk/table', $data);
+        return view('/siswa/table', $data);
     }
 
 
@@ -63,12 +63,12 @@ class Datapenduduk extends BaseController
     public function edit($id)
     {
         $data = [
-            'title' => 'Edit Data Penduduk',
-            'penduduk'  => $this->pendudukModel->find($id),
+            'title' => 'Edit Data siswa',
+            'siswa'  => $this->siswaModel->find($id),
             'meta'      => $this->meta
         ];
 
-        return view('/penduduk/edit', $data);
+        return view('/siswa/edit', $data);
     }
 
 
@@ -76,21 +76,21 @@ class Datapenduduk extends BaseController
     public function detail($id)
     {
         $data = [
-            'title' => 'Detail Data Penduduk',
-            'penduduk'  => $this->pendudukModel->find($id),
+            'title' => 'Detail Data siswa',
+            'siswa'  => $this->siswaModel->find($id),
             'meta'   => $this->meta
         ];
 
-        return $this->respond(view('/penduduk/detail', $data), 200);
+        return $this->respond(view('/siswa/detail', $data), 200);
     }
 
     public function store()
     {
         $rules = [
-            'no_kk'  => [
-                'rules'  => 'required|is_unique[datapenduduk.no_kk]',
+            'nisn'  => [
+                'rules'  => 'required|is_unique[datasiswa.nisn]',
                 'errors' => [
-                    'is_unique' => 'Nomor KK Telah digunakan. Silahkan menggunakan nomor KK yang berbeda!'
+                    'is_unique' => 'Nomor NISN yang anda masukan sudah digunakan.'
                 ]
             ],
         ];
@@ -103,11 +103,11 @@ class Datapenduduk extends BaseController
         }
 
         $data = $this->request->getPost();
-        $this->pendudukModel->save($data);
+        $this->siswaModel->save($data);
 
         $res = [
             'status' => 'success',
-            'msg'   => 'Data Penduduk Berhasil Ditambahkan.',
+            'msg'   => 'Data siswa Berhasil Ditambahkan.',
             // 'data'  => $data
         ];
 
@@ -117,7 +117,7 @@ class Datapenduduk extends BaseController
     public function update($id)
     {
         $data = $this->request->getPost();
-        $this->pendudukModel->update($id, $data);
+        $this->siswaModel->update($id, $data);
 
         $res = [
             'status' => 'success',
@@ -130,7 +130,7 @@ class Datapenduduk extends BaseController
 
     public function delete($id)
     {
-        $this->pendudukModel->delete($id);
+        $this->siswaModel->delete($id);
 
         $res = [
             'status'    => 'success',
@@ -168,9 +168,9 @@ class Datapenduduk extends BaseController
 
         $file = $this->request->getFile("excel_file");
         $fileName = $file->getName();
-        $file->move(WRITEPATH . 'uploads/penduduk', $fileName, true);
+        $file->move(WRITEPATH . 'uploads/siswa', $fileName, true);
         $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
-        $spreadsheet = $reader->load(WRITEPATH . 'uploads/penduduk/' . $fileName);
+        $spreadsheet = $reader->load(WRITEPATH . 'uploads/siswa/' . $fileName);
         $dataExcel = $spreadsheet->getSheet(0)->toArray();
         array_shift($dataExcel);
 
@@ -190,10 +190,10 @@ class Datapenduduk extends BaseController
 
 
         foreach ($data as $dt) {
-            $this->pendudukModel->save($dt);
+            $this->siswaModel->save($dt);
         }
 
-        unlink(WRITEPATH . 'uploads/penduduk/' . $fileName);
+        unlink(WRITEPATH . 'uploads/siswa/' . $fileName);
 
         $res = [
             'status' => 'success',
@@ -208,10 +208,10 @@ class Datapenduduk extends BaseController
     public function upload()
     {
         $data = [
-            'title' => 'Upload Data Penduduk dari File Excel',
+            'title' => 'Upload Data siswa dari File Excel',
             'meta'   => $this->meta
         ];
 
-        return view('/penduduk/upload', $data);
+        return view('/siswa/upload', $data);
     }
 }

@@ -9,29 +9,32 @@
                 <div class="modal-body">
                     <div class="row mb-2">
                         <div class="col-md-4">
-                            <label class="form-label">NIK</label>
+                            <label class="form-label">NISN</label>
                         </div>
                         <div class="col-md-8">
-                            <input name="nik" type="text" class="form-control" required>
+                            <input name="nisn" type="text" class="form-control" required>
+                        </div>
+                    </div>
+
+
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="form-label">Nama Siswa</label>
+                        </div>
+                        <div class="col-md-8">
+                            <input name="nama_siswa" type="text" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="row mb-2">
                         <div class="col-md-4">
-                            <label class="form-label">No. KK</label>
+                            <label class="form-label">Jenis Kelamin</label>
                         </div>
                         <div class="col-md-8">
-                            <input name="no_kk" type="text" class="form-control" required>
-                            <div id="" class="invalid-feedback"></div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Nama Lengkap</label>
-                        </div>
-                        <div class="col-md-8">
-                            <input name="nama_lengkap" type="text" class="form-control" required>
+                            <select name="jenis_kelamin" class="form-control">
+                                <option value="Perempuan">Perempuan</option>
+                                <option value="Laki-laki">Laki-Laki</option>
+                            </select>
                         </div>
                     </div>
 
@@ -49,37 +52,10 @@
 
                     <div class="row mb-2">
                         <div class="col-md-4">
-                            <label class="form-label">Kelurahan</label>
+                            <label class="form-label">Kelas</label>
                         </div>
                         <div class="col-md-8">
-                            <input name="kelurahan" type="text" class="form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Kecamatan</label>
-                        </div>
-                        <div class="col-md-8">
-                            <input name="kecamatan" type="text" class="form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Kabupaten</label>
-                        </div>
-                        <div class="col-md-8">
-                            <input name="kabupaten" type="text" class="form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Provinsi</label>
-                        </div>
-                        <div class="col-md-8">
-                            <input name="provinsi" type="text" class="form-control" required>
+                            <input name="kelas" type="text" class="form-control" required>
                         </div>
                     </div>
 

@@ -14,16 +14,16 @@ class Datapenduduk extends Migration
                 'auto_increment' => true
             ],
 
-            'nik' => [
+            'nisn' => [
                 'type' => 'VARCHAR',
                 'constraint' => 32
             ],
 
-            'no_kk' => [
+            'nama_siswa' => [
                 'type' => 'VARCHAR',
                 'constraint' => 32
             ],
-            'nama_lengkap' => [
+            'jenis_kelamin' => [
                 'type' => 'VARCHAR',
                 'constraint' => 64
             ],
@@ -32,23 +32,7 @@ class Datapenduduk extends Migration
                 'constraint' => 128,
                 'null' => true
             ],
-            'kelurahan' => [
-                'type' => 'VARCHAR',
-                'constraint' => 128,
-                'null' => true
-            ],
-            'kecamatan' => [
-                'type' => 'VARCHAR',
-                'constraint' => 128,
-                'null' => true
-            ],
-
-            'kabupaten' => [
-                'type' => 'VARCHAR',
-                'constraint' => 128,
-                'null' => true
-            ],
-            'provinsi' => [
+            'kelas' => [
                 'type' => 'VARCHAR',
                 'constraint' => 128,
                 'null' => true
@@ -57,11 +41,11 @@ class Datapenduduk extends Migration
 
         $this->forge->addField($data);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('datapenduduk');
+        $this->forge->createTable('datasiswa');
     }
 
     public function down()
     {
-        $this->forge->dropTable('datapenduduk');
+        $this->forge->dropTable('datasiswa');
     }
 }

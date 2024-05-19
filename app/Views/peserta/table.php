@@ -5,10 +5,11 @@
                 <th>No</th>
                 <th>Tahun</th>
                 <!-- <th>Periode</th> -->
-                <th>NIK</th>
-                <th>No. KK</th>
-                <th>Nama Penduduk</th>
+                <th>NISN</th>
+                <th>Nama Siswa</th>
+                <th>Jenis Kelamin</th>
                 <th>Alamat</th>
+                <th>Kelas</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -20,9 +21,10 @@
                     <td><?= $no++; ?></td>
                     <td><?= $dt['tahun']; ?></td>
 
-                    <td><?= $dt['nik']; ?></td>
-                    <td><?= $dt['no_kk']; ?></td>
-                    <td><?= $dt['nama_lengkap']; ?></td>
+                    <td><?= $dt['nisn']; ?></td>
+                    <td><?= $dt['nama_siswa']; ?></td>
+                    <td><?= $dt['jenis_kelamin']; ?></td>
+                    <td><?= $dt['alamat']; ?></td>
                     <td><?= $dt['alamat']; ?></td>
 
                     <td style="text-align: center" width="120px">

@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\KelayakanModel;
 use App\Models\KriteriaModel;
 use App\Models\PesertaModel;
-use App\Models\PendudukModel;
+use App\Models\SiswaModel;
 use App\Models\SubkriteriaModel;
 use App\Libraries\Moora;
 
@@ -23,7 +23,7 @@ class Perhitungan extends BaseController
     public function __construct()
     {
         $this->kriteriaModel = new KriteriaModel();
-        $this->pendudukModel = new PendudukModel();
+        $this->siswaModel = new SiswaModel();
         $this->subkriteriaModel = new SubkriteriaModel();
         $this->pesertaModel = new PesertaModel();
         $this->jumlahKriteria = $this->kriteriaModel->countAllResults();

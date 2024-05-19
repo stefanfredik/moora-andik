@@ -14,13 +14,13 @@
     </div>
 
     <div class="col-lg-3 mb-4">
-        <a class="card bg-orange text-white lift" href="/datapenduduk">
+        <a class="card bg-orange text-white lift" href="/datasiswa">
             <div class="card-body d-flex justify-content-center flex-column">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="me-3">
                         <i class="bi bi-list-ul text-white fa-2x"></i>
-                        <h5 class="text-white">Data Penduduk</h5>
-                        <div class="text-white small"><?= $dataPendudukCount ?> Penduduk</div>
+                        <h5 class="text-white">Data Siswa</h5>
+                        <div class="text-white small"><?= $dataSiswaCount ?> Siswa</div>
                     </div>
                 </div>
             </div>
@@ -34,8 +34,8 @@
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="me-3">
                         <i class="text-primary bi bi-person-lines-fill fa-2x"></i>
-                        <h5 class="text-primary">Data Pengajuan</h5>
-                        <div class="text-primary small"><?= $dataPesertaCount ?> Penduduk</div>
+                        <h5 class="text-primary">Data Peserta</h5>
+                        <div class="text-primary small"><?= $dataPesertaCount ?> Siswa</div>
                     </div>
                 </div>
             </div>
@@ -126,7 +126,7 @@
                     <div class="me-3">
                         <i class="text-white bi bi-card-checklist fa-2x"></i>
                         <h5 class="text-white">Laporan</h5>
-                        <div class="text-white small">Laporan Data Penduduk Bantuan</div>
+                        <div class="text-white small">Laporan Data Siswa Bantuan</div>
                     </div>
                 </div>
             </div>
