@@ -83,7 +83,7 @@
     <div class="collapse" id="laporan" data-bs-parent="#accordionSidenav">
         <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
             <a class="nav-link <?= url_is("/laporan/bantuan") ? 'active' : '' ?>" href="/laporan/bantuan">Data Bantuan</a>
-            <a class="nav-link <?= url_is("/laporan/siswa") ? 'active' : '' ?>" href="/laporan/datasiswa">Siswa</a>
+            <a class="nav-link <?= url_is("/laporan/siswa") ? 'active' : '' ?>" href="/laporan/siswa">Siswa</a>
         </nav>
     </div>
 
