@@ -14,8 +14,8 @@ class UserSeeder extends Seeder
 
 
         $this->db->query("insert into auth_groups (name,description) values ('admin','Admin')");
-        $this->db->query("insert into auth_groups (name,description) values ('kepala-lurah','Kepala Lurah')");
-        $this->db->query("insert into auth_groups (name,description) values ('pendamping-pkh','Pendamping PKH')");
+        $this->db->query("insert into auth_groups (name,description) values ('kepala-sekolah','Kepala Sekolah')");
+
 
         $data = [
             'nama_user' => "Admin",

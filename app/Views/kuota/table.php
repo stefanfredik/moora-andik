@@ -6,9 +6,6 @@
                 <th>Tahun</th>
                 <th>Periode</th>
                 <th>Jumlah Kuota</th>
-                <th>Tanggal Daftar</th>
-                <th>Tanggal Seleksi</th>
-                <th>Tanggal Terima</th>
                 <th>Keterangan</th>
                 <th>Opsi</th>
             </tr>
@@ -21,11 +18,7 @@
                     <td><?= $no++; ?></td>
                     <td><?= $dt['tahun']; ?></td>
                     <td><?= $dt['periode']; ?></td>
-                    <td><?= $dt['jumlah_kuota']; ?></td>
-                    <td class="text-nowrap"><?= rangeTanggalId($dt['tanggal_daftar_mulai'], $dt['tanggal_daftar_selesai'])  ?></td>
-                    <td class="text-nowrap"><?= rangeTanggalId($dt['tanggal_seleksi_mulai'], $dt['tanggal_seleksi_selesai']) ?></td>
-                    <td class="text-nowrap"><?= rangeTanggalId($dt['tanggal_terima_mulai'], $dt['tanggal_terima_selesai']) ?></td>
-
+                    <td><?= $dt['jumlah_kuota']; ?> Siswa</td>
                     <td><?= $dt['keterangan']; ?></td>
 
                     <td style="text-align: center" width="120px">

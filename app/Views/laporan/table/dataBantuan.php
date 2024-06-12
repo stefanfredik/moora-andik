@@ -26,7 +26,7 @@
                     <td><?= $dt['nisn']; ?></td>
                     <td><?= $dt['nama_siswa']; ?></td>
                     <td><?= $dt['alamat']; ?></td>
-                    <th class="text-center">Kelas</th>
+                    <td class="text-center"><?= $dt["kelas"] ?></td>
                     <td><?= $dt['kriteria_nilai']; ?></td>
                     <td><?= $no; ?></td>
                     <!-- <td><?= $dt['status']; ?></td>

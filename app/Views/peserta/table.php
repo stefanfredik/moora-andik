@@ -25,7 +25,7 @@
                     <td><?= $dt['nama_siswa']; ?></td>
                     <td><?= $dt['jenis_kelamin']; ?></td>
                     <td><?= $dt['alamat']; ?></td>
-                    <td><?= $dt['alamat']; ?></td>
+                    <td><?= $dt['kelas']; ?></td>
 
                     <td style="text-align: center" width="120px">
                         <div class="btn-group" role="group" aria-label="Basic example">

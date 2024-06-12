@@ -32,16 +32,20 @@
         Data Siswa
     </a>
     <hr class="hr">
-
-    <a class="nav-link <?= url_is("/kriteria") ? 'active' : '' ?>" href="/kriteria">
-        <div class="nav-link-icon"><i data-feather="layers"></i></div>
+    <a class="nav-link collapsed <?= url_is("/*kriteria*") ? 'active' : '' ?>" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#laporan" aria-expanded="false" aria-controls="collapseDashboards">
+        <div class="nav-link-icon"><i data-feather="activity"></i></div>
         Data Kriteria
+        <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
     </a>
 
-    <a class="nav-link <?= url_is("/subkriteria") ? 'active' : '' ?>" href="/subkriteria">
-        <div class="nav-link-icon"><i data-feather="list"></i></div>
-        Data Sub Kriteria
-    </a>
+    <div class="collapse" id="laporan" data-bs-parent="#accordionSidenav">
+        <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
+            <a class="nav-link <?= url_is("/kriteria") ? 'active' : '' ?>" href="/kriteria">Kriteria</a>
+            <a class="nav-link <?= url_is("/subkriteria") ? 'active' : '' ?>" href="/subkriteria">Subkriteria</a>
+        </nav>
+    </div>
+
+    <hr>
 
     <a class="nav-link <?= url_is("/datapeserta") ? 'active' : '' ?>" href="/datapeserta">
         <div class="nav-link-icon"><i data-feather="file-text"></i></div>
@@ -59,10 +63,10 @@
         Data Moora
     </a>
 
-    <!-- <a class="nav-link <?= url_is("/keputusan") ? 'active' : '' ?>" href="/keputusan">
+    <a class="nav-link <?= url_is("/keputusan") ? 'active' : '' ?>" href="/keputusan">
         <div class="nav-link-icon"><i data-feather="percent"></i></div>
         Data Keputusan
-    </a> -->
+    </a>
 
     <div class="sidenav-menu-heading">Laporan</div>
     <!-- <a class="nav-link" href="/laporan">
@@ -75,6 +79,7 @@
         Laporan
         <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
     </a>
+
     <div class="collapse" id="laporan" data-bs-parent="#accordionSidenav">
         <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
             <a class="nav-link <?= url_is("/laporan/bantuan") ? 'active' : '' ?>" href="/laporan/bantuan">Data Bantuan</a>

@@ -40,7 +40,7 @@ class Laporan extends BaseController
         return view("laporan/databantuan", $data);
     }
 
-    public function penduduk()
+    public function siswa()
     {
         $data = $this->data();
         $this->meta['subtitle'] = "Data Siswa";
@@ -59,11 +59,11 @@ class Laporan extends BaseController
     }
 
 
-    public function cetakPenduduk()
+    public function cetakSiswa()
     {
         $data = $this->data();
         $data["title"] = 'LAPORAN ' . APP_DESC;
-        $this->pdf($data, "laporan/cetakPenduduk");
+        $this->pdf($data, "laporan/cetakSiswa");
     }
 
     private function data()
@@ -121,7 +121,7 @@ class Laporan extends BaseController
                         break;
                     }
                 } else {
-                    $dataPeserta[$key]['periode'] = 'Tidak Tersedia';
+                    $dataPeserta[$key]['periode'] = '-';
                     $dataPeserta[$key]['tanggalTerima'] = 'Tidak Tersedia';
                     $dataPeserta[$key]['status'] = 'Tidak Mendapatkan Bantuan';
                 }

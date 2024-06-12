@@ -13,13 +13,13 @@
                         <thead>
                             <tr class="align-middle">
                                 <th class="text-center">Rangking</th>
-                                <th>NIK</td>
-                                <th>No. KK</td>
-                                <th>Nama Penduduk</th>
-                                <th>Nilai</th>
-                                <th>Keputusan</th>
-                                <th>Periode</th>
-                                <th>Tanggal Terima Bantuan</th>
+                                <th>NISN</td>
+                                <th>Kelas</th>
+                                <th>Nama Siswa</th>
+                                <th>Alamat</th>
+                                <th>Jenis Kelamin</th>
+                                <th>Tahap</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -27,15 +27,15 @@
                             $rank = 1;
                             foreach ($peserta as $ps) :
                             ?>
-                                <tr>
-                                    <td class="text-center "><span class="badge bg-success rounded-circle p-2"><?= $rank++; ?></span></td>
-                                    <td><?= $ps['nik'] ?></td>
-                                    <td><?= $ps['no_kk'] ?></td>
-                                    <td><?= $ps['nama_lengkap'] ?></td>
-                                    <td><?= $ps['kriteria_nilai']; ?></td>
-                                    <td><span class="badge <?= $ps['status'] == 'Mendapatkan Bantuan' ? 'bg-success' : 'bg-danger'; ?>"><?= $ps['status']; ?></span></td>
+                                <tr class="<?= $ps['periode'] == '-' ? 'bg-danger text-white' : ''; ?>">
+                                    <td class="text-center "><?= $ps["rangking"] ?></td>
+                                    <td><?= $ps['nisn'] ?></td>
+                                    <td><?= $ps['kelas'] ?></td>
+                                    <td><?= $ps['nama_siswa']; ?></td>
+                                    <td><?= $ps['alamat']; ?></td>
+                                    <td><?= $ps['jenis_kelamin']; ?></td>
                                     <td><?= @$ps['periode']; ?></td>
-                                    <td class="text-nowrap"><?= @$ps['tanggalTerima']; ?></td>
+                                    <td><?= @$ps['status']; ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

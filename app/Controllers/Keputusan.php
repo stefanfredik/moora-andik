@@ -7,25 +7,28 @@ use App\Libraries\Moora;
 use App\Models\KriteriaModel;
 use App\Models\KuotaModel;
 use App\Models\PesertaModel;
-use App\Models\PendudukModel;
+use App\Models\SiswaModel;
 use App\Models\SubkriteriaModel;
 
-class Keputusan extends BaseController {
+class Keputusan extends BaseController
+{
     var $meta = [
         'url' => 'keputusan',
         'title' => 'Data Keputusan',
         'subtitle' => 'Halaman Keputusan'
     ];
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->kriteriaModel = new KriteriaModel();
-        $this->pendudukModel = new PendudukModel();
+        $this->siswaModel = new SiswaModel();
         $this->subkriteriaModel = new SubkriteriaModel();
         $this->pesertaModel = new PesertaModel();
         $this->kuotaModel = new KuotaModel();
     }
 
-    public function index() {
+    public function index()
+    {
         $kriteria       = $this->kriteriaModel->findAll();
         $subkriteria    = $this->subkriteriaModel->findAll();
         $peserta        = $this->pesertaModel->findAllPeserta();
@@ -52,7 +55,8 @@ class Keputusan extends BaseController {
         return view('/keputusan/index', $data);
     }
 
-    private function statusKeputusan($dataPeserta, $dataKuota) {
+    private function statusKeputusan($dataPeserta, $dataKuota)
+    {
         $kuotaTahun = [];
         foreach ($dataKuota as $row) {
             $tahun = $row['tahun'];
@@ -82,7 +86,7 @@ class Keputusan extends BaseController {
                         break;
                     }
                 } else {
-                    $dataPeserta[$key]['periode'] = 'Tidak Tersedia';
+                    $dataPeserta[$key]['periode'] = '-';
                     $dataPeserta[$key]['tanggalTerima'] = 'Tidak Tersedia';
                     $dataPeserta[$key]['status'] = 'Tidak Mendapatkan Bantuan';
                 }

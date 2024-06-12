@@ -14,9 +14,9 @@
     </a>
 
     <div class="sidenav-menu-heading">Data</div>
-    <a class="nav-link <?= url_is('/datapenduduk') ? 'active' : '' ?>" href="/datapenduduk">
+    <a class="nav-link <?= url_is('/datasiswa') ? 'active' : '' ?>" href="/datasiswa">
         <div class="nav-link-icon"><i data-feather="layers"></i></div>
-        Data Penduduk
+        Data Siswa
     </a>
 
     <a class="nav-link collapsed <?= url_is("/laporan*") ? 'active' : '' ?>" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#laporan" aria-expanded="false" aria-controls="collapseDashboards">
@@ -27,7 +27,7 @@
     <div class="collapse" id="laporan" data-bs-parent="#accordionSidenav">
         <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
             <a class="nav-link <?= url_is("/laporan/bantuan") ? 'active' : '' ?>" href="/laporan/bantuan">Data Bantuan</a>
-            <a class="nav-link <?= url_is("/laporan/penduduk") ? 'active' : '' ?>" href="/laporan/penduduk">Penduduk</a>
+            <a class="nav-link <?= url_is("/laporan/siswa") ? 'active' : '' ?>" href="/laporan/datasiswa">Siswa</a>
         </nav>
     </div>
 

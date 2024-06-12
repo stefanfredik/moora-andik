@@ -151,7 +151,7 @@ $routes->group("laporan", static function ($router) {
     $router->get("bantuan", "Laporan::bantuan");
     $router->get("siswa", "Laporan::siswa");
 
-    $router->get("cetaksiswa", "Laporan::cetaksiswa");
+    $router->get("cetaksiswa", "Laporan::cetakSiswa");
     $router->get("cetakbantuan", "Laporan::cetakBantuan");
 });
 

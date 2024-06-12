@@ -22,7 +22,7 @@
                 <tr>
                     <td class="text-center"><?= ++$no; ?></td>
                     <td><?= $dt['tahun']; ?></td>
-                    <td><?= $dt['nik']; ?></td>
+                    <td><?= $dt['nisn']; ?></td>
                     <td><?= $dt['nama_siswa']; ?></td>
                     <td><?= ucwords($dt['alamat']); ?></td>
                     <td><?= $dt['kelas']; ?></td>

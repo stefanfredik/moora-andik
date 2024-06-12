@@ -8,7 +8,7 @@
     <title>Document</title>
     <style>
         td {
-            font-size: 8px;
+            font-size: 14px;
         }
 
         table,
@@ -38,7 +38,7 @@
 
         .title {
             margin-top: 20px;
-            margin-bottom: 70px;
+            /* margin-bottom: 70px; */
         }
     </style>
 </head>
@@ -48,48 +48,51 @@
         <div style="text-align: center; ">
             <?php
             $srcLogo = APPPATH . '../public/assets/img/logo.png';
-            $srcBali = APPPATH . '../public/assets/img/Bali.png';
+            $srcBali = APPPATH . '../public/assets/img/mabar.png';
 
             $imageDataLogo  = base64_encode(file_get_contents($srcLogo));
-            $imageDataBali   = base64_encode(file_get_contents($srcBali));
+            $imageMabar   = base64_encode(file_get_contents($srcBali));
 
             $renderLogo     = 'data:' . mime_content_type($srcLogo) . ';base64,' . $imageDataLogo;
-            $renderDataBali   = 'data:' . mime_content_type($srcBali) . ';base64,' . $imageDataBali;
+            $renderMabar   = 'data:' . mime_content_type($srcBali) . ';base64,' . $imageMabar;
             ?>
 
 
 
             <div style="display: inline-block;">
-                <!-- <img width="60px" src="<?= $renderDataBali; ?>" alt=""> -->
+                <img width="60px" src="<?= $renderMabar; ?>" alt="">
             </div>
 
             <div style="display: inline-block; text-align: center; margin: 0 80px;">
-                <p style="margin: 0; font-weight: bold;">PEMERINTAH PROVINSI NTT</p>
-                <p style="margin: 0; font-weight: bold;">Kabupaten Manggarai Barat</p>
-                <p style="margin: 0; font-weight: bold;">SMAN 2 Komodo</p>
-                <!-- <p style="margin: 0; font-size: small;">Jl. Tukad Pakerisan No. 65 Denpasar, Kode Pos 80225</p> -->
+                <p style="margin: 0; font-weight: bold;">PEMERINTAH PROVINSI NUSA TENGGARA TIMUR</p>
+                <p style="margin: 0; font-weight: bold;">DINAS PENDIDIKAN DAN KEBUDAYAAN</p>
+                <p style="margin: 0; font-weight: bold;">KABUPATEN MANGGARAI BARAT</p>
+                <p style="margin: 0; font-weight: bold;">SMAN 2 KOMODO</p>
+                <p style="margin: 0; font-size: small;">Jl. Lintas Selatan, Desa Nggorang, Kode Pos. 86763</p>
             </div>
 
             <div style="display: inline-block;">
-                <!-- <img width="60px" src="<?= $renderLogo; ?>" alt=""> -->
+                <img width="60px" src="<?= $renderLogo; ?>" alt="">
             </div>
         </div>
         <hr>
 
         <div>
 
-            <p style="text-align: right;"><?php echo "Kelurahan Panjer, " . date('d-m-Y'); ?></p>
+            <p style="text-align: right;"><?php echo "Nggorang, " . date('d-m-Y'); ?></p>
             <h3 class="head"><?= $title; ?></h3>
-            <h3 class="head">Tahun 2023</h3>
+            <h3 class="head">Tahun 2024</h3>
         </div>
 
 
         <?= $this->renderSection("table"); ?>
         <div class="footer">
             <div class="title">
-                Kepala Lurah
+                Kepala Sekolah
             </div>
-
+            <div style="display: inline-block;">
+                <img width="60px" src="<?= $renderLogo; ?>" alt="">
+            </div>
             <div>
                 <p style="font-weight: bold; margin: 0;">( -------------------- )</p>
                 <!-- <p style="margin: 0;">Pembi</p> -->

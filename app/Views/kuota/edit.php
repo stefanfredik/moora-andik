@@ -37,55 +37,6 @@
 
                     <div class="row mb-2">
                         <div class="col-md-4">
-                            <label class="form-label">Tanggal Daftar</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col">
-                                    <input value="<?= $kuota["tanggal_daftar_mulai"] ?>" name="tanggal_daftar_mulai" type="date" class="form-control" required>
-                                </div>
-                                <div class="col">
-                                    <input value="<?= $kuota["tanggal_daftar_selesai"] ?>" name="tanggal_daftar_selesai" type="date" class="form-control" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Tanggal Seleksi</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col">
-                                    <input value="<?= $kuota["tanggal_seleksi_mulai"] ?>" name="tanggal_seleksi_mulai" type="date" class="form-control" required>
-                                </div>
-                                <div class="col">
-                                    <input value="<?= $kuota["tanggal_seleksi_selesai"] ?>" name="tanggal_seleksi_selesai" type="date" class="form-control" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Tanggal Terima</label>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="row">
-                                <div class="col">
-                                    <input value="<?= $kuota["tanggal_terima_mulai"] ?>" name="tanggal_terima_mulai" type="date" class="form-control" required>
-                                </div>
-                                <div class="col">
-                                    <input value="<?= $kuota["tanggal_terima_selesai"] ?>" name="tanggal_terima_selesai" type="date" class="form-control" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
                             <label class="form-label">Keterangan</label>
                         </div>
                         <div class="col-md-8">

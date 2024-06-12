@@ -1,6 +1,6 @@
 <?= $this->extend('temp/index'); ?>
 <?= $this->section("content"); ?>
-<a target="__blank" class="btn btn btn-primary my-2" href="/laporan/cetakpenduduk"><i class="bi bi-printer-fill mx-2"></i>Cetak Laporan</a>
+<a target="__blank" class="btn btn btn-primary my-2" href="/laporan/cetaksiswa"><i class="bi bi-printer-fill mx-2"></i>Cetak Laporan</a>
 <div class="row">
     <div class="col">
         <div class="card  shadow">
@@ -9,7 +9,7 @@
             </div>
             <div id="data" class="card-body">
                 <div class="table-responsive">
-                    <?= $this->include("laporan/table/dataPenduduk"); ?>
+                    <?= $this->include("laporan/table/datasiswa"); ?>
                 </div>
             </div>
         </div>
