@@ -38,7 +38,7 @@
 
         .title {
             margin-top: 20px;
-            /* margin-bottom: 70px; */
+            margin-bottom: 70px;
         }
     </style>
 </head>
@@ -91,11 +91,11 @@
                 Kepala Sekolah
             </div>
             <div style="display: inline-block;">
-                <img width="60px" src="<?= $renderLogo; ?>" alt="">
+                <!-- <img width="60px" src="<?= $renderLogo; ?>" alt=""> -->
             </div>
             <div>
-                <p style="font-weight: bold; margin: 0;">( -------------------- )</p>
-                <!-- <p style="margin: 0;">Pembi</p> -->
+                <p style="font-weight: bold; margin: 0;">( Libertus Lahu )</p>
+                <p style="margin: 0;">NIP. _______________</p>
                 <!-- <p style="margin: 0;"></p> -->
             </div>
         </div>
