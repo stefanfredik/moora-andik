@@ -32,7 +32,7 @@ class Peserta extends BaseController
 
         $data = [
             'title' => $this->meta["title"],
-            'meta'   => $this->meta,
+            'meta' => $this->meta,
         ];
 
         return view('/peserta/index', $data);
@@ -42,10 +42,14 @@ class Peserta extends BaseController
     {
         $data = [
             'title' => $this->meta["title"],
-            'meta'   => $this->meta,
-            'dataPeserta' => $this->pesertaModel->findAllPeserta()
+            'meta' => $this->meta,
+            'dataPeserta' => $this->pesertaModel->findAllPeserta(),
+            'dataKriteria' => $this->kriteriaModel->findAll(),
+            'dataSubkriteria' => $this->subKriteriaModel->findAll(),
         ];
 
+
+        // dd($data);
         return view('/peserta/table', $data);
     }
 
@@ -53,7 +57,7 @@ class Peserta extends BaseController
     {
         $data = [
             'title' => "Tambah " . $this->meta["title"],
-            'meta'   => $this->meta,
+            'meta' => $this->meta,
             'dataSiswa' => $this->siswaModel->findAllNonPeserta(),
             'dataKriteria' => $this->kriteriaModel->findAll(),
             'dataSubkriteria' => $this->subKriteriaModel->findAll(),
@@ -67,7 +71,7 @@ class Peserta extends BaseController
     {
         $data = [
             'title' => 'Edit Data Siswa Terdaftar',
-            'meta'   => $this->meta,
+            'meta' => $this->meta,
             'dataSiswa' => $this->siswaModel->findAll(),
             'dataKriteria' => $this->kriteriaModel->findAll(),
             'dataSubkriteria' => $this->subKriteriaModel->findAll(),
@@ -84,11 +88,11 @@ class Peserta extends BaseController
     {
 
         $data = [
-            'dataKriteria'  => $this->kriteriaModel->findAll(),
+            'dataKriteria' => $this->kriteriaModel->findAll(),
             'dataSubkriteria' => $this->subKriteriaModel->findAll(),
             'dataSiswa' => $this->siswaModel->findAll(),
             'peserta' => $this->pesertaModel->findPeserta($id),
-            'meta'   => $this->meta
+            'meta' => $this->meta
         ];
 
         // dd($this->pesertaModel->findAllPeserta($id)[0]);
@@ -123,8 +127,8 @@ class Peserta extends BaseController
 
         $res = [
             'status' => 'success',
-            'msg'   => 'Data Peserta Berhasil Ditambahkan.',
-            'data'  => $data
+            'msg' => 'Data Peserta Berhasil Ditambahkan.',
+            'data' => $data
         ];
 
         return $this->respond($res, 200);
@@ -137,7 +141,7 @@ class Peserta extends BaseController
 
         $res = [
             'status' => 'success',
-            'msg'   => 'Data Berhasil Diupdate.',
+            'msg' => 'Data Berhasil Diupdate.',
         ];
 
         return $this->respond($res, 200);
@@ -148,8 +152,8 @@ class Peserta extends BaseController
     {
         $this->pesertaModel->delete($id);
         $res = [
-            'status'    => 'success',
-            'msg'     => 'Data berhasil dihapus.',
+            'status' => 'success',
+            'msg' => 'Data berhasil dihapus.',
         ];
 
         return $this->respond($res, 200);

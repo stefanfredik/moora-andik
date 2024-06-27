@@ -48,7 +48,7 @@
 
                         <div class="col-md-8">
                             <select class="form-control" name="id_siswa" id="nama" required>
-                                <option value="">Pilih Siswa</option>
+                                <!-- <option value="">Pilih Siswa</option> -->
                                 <?php foreach ($dataSiswa as $dt) : ?>
                                     <option value="<?= $dt['id']; ?>"><?= $dt['nama_siswa']; ?></option>
                                 <?php endforeach; ?>
