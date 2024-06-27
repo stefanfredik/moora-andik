@@ -50,11 +50,11 @@
             $srcLogo = APPPATH . '../public/assets/img/logo.png';
             $srcBali = APPPATH . '../public/assets/img/mabar.png';
 
-            $imageDataLogo  = base64_encode(file_get_contents($srcLogo));
-            $imageMabar   = base64_encode(file_get_contents($srcBali));
+            $imageDataLogo = base64_encode(file_get_contents($srcLogo));
+            $imageMabar = base64_encode(file_get_contents($srcBali));
 
-            $renderLogo     = 'data:' . mime_content_type($srcLogo) . ';base64,' . $imageDataLogo;
-            $renderMabar   = 'data:' . mime_content_type($srcBali) . ';base64,' . $imageMabar;
+            $renderLogo = 'data:' . mime_content_type($srcLogo) . ';base64,' . $imageDataLogo;
+            $renderMabar = 'data:' . mime_content_type($srcBali) . ';base64,' . $imageMabar;
             ?>
 
 
@@ -79,8 +79,12 @@
 
         <div>
 
-            <p style="text-align: right;"><?php echo "Nggorang, " . date('d-m-Y'); ?></p>
-            <h3 class="head"><?= $title; ?></h3>
+            <p style="text-align: right;">
+                <?php echo "Nggorang, " . date('d-m-Y'); ?>
+            </p>
+            <h3 class="head">
+                <?= $title; ?>
+            </h3>
             <h3 class="head">Tahun 2024</h3>
         </div>
 
@@ -94,7 +98,7 @@
                 <!-- <img width="60px" src="<?= $renderLogo; ?>" alt=""> -->
             </div>
             <div>
-                <p style="font-weight: bold; margin: 0;">( Libertus Lahu )</p>
+                <p style="font-weight: bold; margin: 0;">( Kornelis Joni )</p>
                 <p style="margin: 0;">NIP. _______________</p>
                 <!-- <p style="margin: 0;"></p> -->
             </div>
